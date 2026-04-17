@@ -59,6 +59,28 @@ ai-rogan/
    ```
 3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Deployment
+
+### Cloud Run (Easiest Option)
+
+This project is configured for easy deployment to Google Cloud Run using source-based builds.
+
+1. Make sure you have the [Google Cloud SDK](https://cloud.google.com/sdk) installed and authenticated.
+2. Ensure you have a Google Cloud project selected:
+   ```bash
+   gcloud config set project YOUR_PROJECT_ID
+   ```
+3. Run the deployment script in the root directory:
+   ```bash
+   ./deploy.sh
+   ```
+
+This script will:
+1. Deploy the backend to Cloud Run.
+2. Retrieve the backend URL.
+3. Deploy the frontend to Cloud Run, passing the backend URL as an environment variable.
+
 ## License
 
 MIT
+
